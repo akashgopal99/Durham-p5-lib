@@ -1,0 +1,104 @@
+<!-- For the best styling use Google Chrome to view html file -->
+<!-- All sliders and radio buttons are best viewed via Google Chrome -->
+<!DOCTYPE html>
+<html lang="en">
+    <title>Programming Summative</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styling.css">
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+            .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+            <h1 class="w3-margin w3-jumbo">Programming Summative</h1>
+            <p class="w3-xlarge">msqj93</p>
+            <a href="https://github.com/stevenaeola/Durham-p5-lib" target="_blank" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">p5 Library</a>
+        </header>
+        <div class="w3-row-padding w3-white w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>Instructions</h1>
+                    <h5 class="w3-padding-16">
+                        Click '<b>Confirm Settings</b>' to draw the shape
+                        <br>
+                        Press '<b>C</b>' to change the colour
+                        <br>
+                        Press '<b>X</b>' to reset to default settings
+                    </h5>
+                    <p class="w3-text-grey">
+                        Once initally drawn hover over the shape and use the scroll wheel to alter its size. 
+                        Click and drag from the center of the shape to move the object around the screen.
+                        You are able to alter the properties of the shape by adjusting the settings and then
+                        clicking on the '<b>Confirm Settings</b>' button.
+                    </p>
+                </div>
+            </div>
+            <div class="w3-third w3-center">
+                <img src="Circles.png" alt="Image couldn't be loaded"></img>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>Settings</h1>
+                </div>
+            </div>
+            <div class="w3-content">   
+                <form class="w3-container w3-card-4">
+                    <div class="w3-third">
+                        <h3>Size</h3>
+                        <div class="slidecontainer">
+                            <input type="range" min="5" max="105" value="45" class="slider" id="mySize">
+                        </div>
+                    </div>
+                    <div class="w3-third">
+                        <h3>Colour Mode</h3>
+                        <p></p>
+                        <div class="container">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" value="R" checked name="colour" id="myRed">
+                            <label for="myRed"><span class="radio">Red</span></label>
+                        </div>
+                        <br>
+                        <div class="container">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" value="G" name="colour" id="myGreen">
+                            <label for="myGreen"><span class="radio">Green</span></label>
+                        </div>
+                        <br>
+                        <div class="container">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" value="B" name="colour" id="myBlue">
+                            <label for="myBlue"><span class="radio">Blue</span></label>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="w3-third">
+                        <h3>Speed</h3>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="15" value="5" class="slider" id="mySpeed">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="w3-center">
+                <br>
+                <button class="w3-button w3-red w3-padding-large w3-large w3-margin-top" id="btnConfirm">Confirm Settings</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("btnConfirm").onclick = function(){setValues()};
+        </script>
+    </body>
+</html>

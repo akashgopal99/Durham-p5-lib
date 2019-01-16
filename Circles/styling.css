@@ -1,0 +1,117 @@
+canvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+    padding: 15px;
+}
+
+body{
+	background-color: red;
+}
+
+form{
+    margin-top: 90px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+    
+::-webkit-scrollbar-track {
+    background: red;
+    border-radius: 12px;
+}
+    
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 12px;  
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: black;  
+} 
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+  
+  /* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    height: 15px;
+    border-radius: 5px;
+    background: red; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+  
+  /* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: lightgray; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius: 50%;
+    background: lightgray; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+.container label {
+    position: relative;
+  }
+
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.container span.radio:hover {
+    cursor: pointer;
+  }
+  .container span.radio::before {
+    left: -52px;
+    width: 45px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50px;
+  }
+  .container span.radio::after {
+    left: -49px;
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    background-color: darkred;
+    transition: left .25s, background-color .25s;
+  }
+  input[type="radio"]:checked + label span.radio::after {
+    left: -27px;
+    background-color: lightgray;
+  }
